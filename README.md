@@ -1,16 +1,8 @@
 # ABOUT
 
-This is the source code for <http://writtenkitten.net/>, provided for the
-interest of anyone who'd like to know how it works, or adapt it for their own
-use.
+This is the source code for LindyDrop, adapted from <http://writtenkitten.net>
 
-The website and the code are provided "as is" and we don't have any particular
-plans to support or improve them, though if you were to send us something 
-awesome me might consider it.
-
--- Skud and Emily
-
-# LICENSE
+# WRITTEN? KITTEN! LICENSE
 
 Copyright (c) 2011 Alex "Skud" Bayley and Emily Turner
 All rights reserved.
