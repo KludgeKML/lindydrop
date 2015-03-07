@@ -1,3 +1,5 @@
+Lindy Drop is based on Written? Kitten!
+
 This is a list of people who've contributed to Written? Kitten!,
 including those who aren't visible on Github for various reasons.
 
