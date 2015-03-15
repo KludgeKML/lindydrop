@@ -3,17 +3,40 @@
   <title>Lindy Drop</title>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 
   <link href="lindydrop.css" rel="stylesheet"/>
   <script src="lindydrop.js"></script>
 </head>
 
-<body onLoad="set_search($('#search').val()); restore_text(); set_tabs();">
+<body>
 
 <div id="main">
 <a name="top"></a>
 <h1>Lindy Drop</h1>
-<div id="kittenFrame">
+
+<div id="editor">
+  <form>
+    <textarea id="write-area" cols="80" rows="30"></textarea>
+  </form>
+  <form id="controls">
+    <span class="meta">
+      Fresh Lindy Clip every
+      <select id="how-many">
+      <option value="100">100</option>
+      <option value="200">200</option>
+      <option value="500">500</option>
+      <option value="1000">1000</option>
+      </select> words
+    </span>
+    <span class="meta">
+    Current word count: <span id="display-words">0</span>
+    </span>
+  </form>
+</div>
+
+<div id="lindyFrame">
+  <div id="player"></div>
   <div id="warning-no-ls" class="warning" style="display:none">
     <h2>Warning!</h2>
     <p>We don&apos;t save your work for you! You&apos;ll need to regularly copy
@@ -32,27 +55,10 @@
     copy and paste your work to an external document every so often, just in case.</p>
     <p class="hidelink"><a href="#" class="hide" onClick="hide_warning()">OK, got it!</a></p>
   </div>
-  <div id="kittenCredit"></div>
+  <div id="lindyCredit"></div>
 </div>
 
-<form>
-  <input type="hidden" name="hidden_count" value="" disabled  />
-  <textarea id="writearea" cols="80" rows="30" onKeyDown= "tabs(event);" onKeyUp="word_count(this.value, hidden_count);"></textarea>
-</form>
-<form id="controls">
-  <span class="meta">
-    Fresh Lindy Clip every
-    <select id="howmany" onChange="set_reward(this.value)">
-    <option value="100">100</option>
-    <option value="200">200</option>
-    <option value="500">500</option>
-    <option value="1000">1000</option>
-    </select> words
-  </span>
-  <span class="meta">
-  Current word count: <span id="displayWords">0</span>
-  </span>
-</form>
+
 </div> <!-- main -->
 
 <div id="about">
