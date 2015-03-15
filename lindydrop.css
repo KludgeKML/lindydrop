@@ -50,6 +50,11 @@ body {  background-color: #6AAFDA }
   width: 65%;
 }
 
+#lindyFrame {
+  width: 100%;
+  height: auto;
+}
+
 
 #about {
   margin: 50px auto;
