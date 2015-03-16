@@ -12,8 +12,10 @@ var TriggerWriteArea = function (selector) {
   this.word_count_display_selector = "#editor #display-words";
 
   if (typeof localStorage != "undefined") {
-    $(this.selector).attr("value", localStorage.text);
-    this.wordCount(localStorage.text);
+    text = localStorage.text;
+    if (text == undefined) text = '';
+    $(this.selector).attr("value", text);
+    this.wordCount(text);
   }
 
   this.findNextReward();
