@@ -1,5 +1,3 @@
-var dataKey="NOTHING";
-
 var YouTubeReward = function (selector_id) {
 	this.selector = '#' + selector_id;
 	this.selector_id = selector_id;
