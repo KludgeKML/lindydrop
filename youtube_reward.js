@@ -43,16 +43,20 @@ function getIt() {
 				"&q=Lindy+Hop"
 
 
-	var jqxhr = $.ajax(queryString)
-  		.done(function() {
-    		alert( "success" );
-  		})
-  		.fail(function() {
-    		alert( "error" );
-  		})
-  		.always(function() {
-    		alert( "complete" );
-  		});
+	var jqxhr = $.ajax({
+		type: 'GET',
+		url: queryString,
+        contentType: "application/json",
+        dataType: 'json',
+	}).done(function(json) {
+    	alert( "success" );
+  	})
+  	.fail(function() {
+    	alert( "error" );
+  	})
+  	.always(function() {
+    	alert( "complete" );
+  	});
 
 	// this.player.cueVideoById(videoId:String);
 }
