@@ -37,11 +37,11 @@ var TriggerWriteArea = function (selector) {
     }
   });
 
-  $('.rewarder-choose-again').click(function() {
-    twa.words_for_reward += parseInt($(this).data('increment'));
+  $('.rewarder-choose-another').click(function() {
+    twa.next_reward += parseInt($(this).data('increment'));
     twa.updateCountDisplay();
     twa.findNextReward();
-  }));
+  });
 
   $(this.reward_selector).change(function() {
     twa.next_reward -= twa.words_for_reward;
