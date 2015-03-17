@@ -13,11 +13,14 @@ var YouTubeReward = function (selector_id) {
       	'onStateChange': this.onPlayerStateChange
     	}
   	});
+
+	$(this.selector).hide();
 }
 
 /* Run the player with the current reward */
 YouTubeReward.prototype.triggerReward = function() {
-  this.player.playVideo();
+	$(this.selector).show();
+  	this.player.playVideo();
 };
 
 /* Called when the player is up */
