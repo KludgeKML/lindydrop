@@ -2,10 +2,13 @@ var writearea;
 var reward_frame;
 
 $( document ).ready(function() {
-  writearea = new TriggerWriteArea("#write-area");
+  writearea = new TriggerWriteArea("#editable");
   writearea.onReward(function() {
     reward_frame.triggerReward();
-  })
+  });
+
+  aloha(document.querySelector('#editable'));
+
   var tag = document.createElement('script');
   tag.src = "http://www.youtube.com/player_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];

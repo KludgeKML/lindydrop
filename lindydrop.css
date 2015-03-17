@@ -50,6 +50,24 @@ body {  background-color: #6AAFDA }
   width: 65%;
 }
 
+#editable {
+  height: 500px;
+  width: 600px;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.rewarder-choose-another {
+  margin: 5px;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+
 #lindyFrame {
   width: 100%;
   height: auto;
