@@ -22,7 +22,7 @@ YouTubeReward.prototype.triggerReward = function() {
 
 /* Called when the player is up */
 YouTubeReward.prototype.onPlayerReady = function(event) {
-	getIt(this);
+	getIt(event.target);
 	// this.prepareNextVideo();
 };
 
@@ -34,7 +34,7 @@ YouTubeReward.prototype.prepareNextVideo = function() {
 	/* find videoId */
 }
 
-function getIt(rewarder) {
+function getIt(player) {
 	queryString = "https://www.googleapis.com/youtube/v3/search" +
 				"?key=" + dataKey +
 				"&part=snippet" +
@@ -50,7 +50,7 @@ function getIt(rewarder) {
         dataType: 'json',
 	}).done(function(json) {
 		$('#next-title').text(json.items[0].snippet.title);
-		rewarder.player.cueVideoById(json.items[0].id.videoId);
+		player.cueVideoById(json.items[0].id.videoId);
   	})
   	.fail(function() {
     	alert( "error" );
